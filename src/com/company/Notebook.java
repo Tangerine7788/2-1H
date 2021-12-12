@@ -4,8 +4,8 @@ public final class Notebook extends Gadgets {
     private String name;
     private String manufacturer;
 
-    public Notebook(String store, String address, com.company.EnumColor color, int price, String name, String manufacturer) {
-        super(store, address, color, price);
+    public Notebook(String store, String address, Shope shope, com.company.EnumColor color, int price, String name, String manufacturer) {
+        super(store, address, shope, color, price);
         this.name = name;
         this.manufacturer = manufacturer;
     }

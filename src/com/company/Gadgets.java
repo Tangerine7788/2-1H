@@ -6,29 +6,24 @@ public class Gadgets extends Store {
     private EnumColor color;
 
     private int price ;
-    private String EnumColor;
 
-    public Gadgets(String store, String address, EnumColor color,  int price) {
-        super(store, address);
+
+    public Gadgets(String store, String address, Shope shope, com.company.EnumColor color, int price) {
+        super(store, address, shope);
         this.color = color;
-
         this.price = price;
+
     }
 
-
-    public com.company.EnumColor getColor() {
+    public EnumColor getColor() {
         return color;
     }
-
-
 
     public int getPrice() {
         return price;
     }
 
-    public String getEnumColor() {
-        return EnumColor;
-    }
+
 
 
 
@@ -39,10 +34,11 @@ public class Gadgets extends Store {
     }
 
     public String getInfo(){
-        return  "Gadgets Color:" + color +
+        return  "Gadgets Color:" + getColor() +
                 "\nStore name::" + getStore()+
                 "\nStore address:" + getAddress() +
-                "\nPrice:" + price;
+                "\nPrice:" + getPrice() +
+                "\nTown: " + getShope().getTown() ;
 
     }
 
